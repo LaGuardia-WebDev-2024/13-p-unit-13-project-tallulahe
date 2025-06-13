@@ -21,39 +21,60 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1> Quiz All About Tallulah </h1>
+   
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1 ">Pitch Perfect</option>
+          <option value="movie2">Hairspray</option>
+          <option value="movie3">Aquamarine</option>
+          <option value="movie4">The Notebook</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
     <div id="movie-result"></div>
+    
+<!--     <img src= "https://media.npr.org/assets/img/2015/05/11/5706_d040_00225_0198rv2_comp_cropv2_wide-127a09569d2c55faf64c9745a05363819da44879.jpg?s=1100&c=50&f=jpeg"
+          width= "210"
+         id= "PitchPerfect-pic"
+         style= "display:none">  -->
+    
+  
     <hr />
     <!-- Book Question -->
-    <form id="book-form">
+    <form id="food-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        🥑 What is my favorite Food?
+        <select id="food-answer">
+          <option value="Sushi">Sushi</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Chicken Tenders">Chicken Tenders</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Fav Food Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="food-result"></div>
+    
+<!--     <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/960px-Sushi_platter.jpg"
+          width= "210"
+         id= "Sushi-pic"
+         style= "display:none">  -->
+    
+<!--     <style> 
+      .declaration { 
+      font: 20px Cursive;
+      }
+    </style> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      
+      }
       //Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
@@ -62,25 +83,28 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+          $("#movie-result").text("U R CORRECT!");
         } else {
           $("#movie-result").text("Try Again!");
         }
       });
 
-      //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
-        event.preventDefault();
+//       //Book Question jQuery Code
+//       $("#food-form").on("submit", function (event) {
+//         event.preventDefault();
 
-        var $answer = $("#book-answer");
-        var answer = $answer.val();
+//         var $answer = $("#food-answer");
+//         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
-        } else {
-          $("#book-result").text("Try Again!");
-        }
-      });
+//         if (answer === "food1") {
+//           $("#food-result").text("U R CORRECT!");
+//         } else {
+//           $("#food-result").text("Try Again!");
+//         }
+//       });
+      
+//       $("#PitchPerfect-pic").slideDown( 1000)
+     
     </script>
   </body>
 
