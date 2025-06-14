@@ -22,14 +22,17 @@ Select ONE Additional Feature to Add
   </head>
   <body>
     <h1> Quiz All About Tallulah </h1>
-   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Jersey+15&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1 ">Pitch Perfect</option>
+          <option value="movie1">Pitch Perfect</option>
           <option value="movie2">Hairspray</option>
           <option value="movie3">Aquamarine</option>
           <option value="movie4">The Notebook</option>
@@ -38,7 +41,42 @@ Select ONE Additional Feature to Add
       <button type="submit">Check Movie Answer</button>
     </form>
     <div id="movie-result"></div>
+    <body>
+        <img
+         src= "https://images.bauerhosting.com/legacy/empire-tmdb/films/254470/images/anItUS64TeGKPv6MJ99DMv7o0Z0.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80"
+         alt= "Pitch Perfect"
+          width"50"
+         > 
+      <img 
+           src= "https://resizing.flixster.com/MIdr67MR0bIty2Kn8aYzHDqPtjs=/fit-in/705x460/v2/https://resizing.flixster.com/4_1AjB6jfFzMBFZIbcuF5EOiejc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzZhNTcyMTk0LTFmNjMtNDcyNS1iM2YwLWJmNGMxNDkyMmVlYS53ZWJw"
+           alt="Hairspray"
+           width= "210"
+           > 
+      <img
+           src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/3ffd1fde-7b01-4a44-9d69-fe1e6fdedf0c/compose?aspectRatio=1.78&format=webp&width=1200">
+      alt="Aquamarine"
+      width="50"
+    </body>
+    $("img").animate (
+    {
+    width:"310"px,
+    marginLeft:"30px"
+    borderWidth:"20px"
+    }
+    2500
+    ); 
     
+    $("h1"). animate (
+    { 
+    marginLeft:"20px",
+    fontSize:"6em"
+    },
+    3000
+    ); 
+    
+    
+    
+      
 <!--     <img src= "https://media.npr.org/assets/img/2015/05/11/5706_d040_00225_0198rv2_comp_cropv2_wide-127a09569d2c55faf64c9745a05363819da44879.jpg?s=1100&c=50&f=jpeg"
           width= "210"
          id= "PitchPerfect-pic"
@@ -46,6 +84,17 @@ Select ONE Additional Feature to Add
     
   
     <hr />
+    <script> 
+      $("#Hairspray-pic").slideDown(1000, function() {
+        $("#Hairspray-h1"). SlideDown (3000); 
+      }); 
+    </script>
+    
+    <script> 
+      $("#Aquamarine-pic").slideDown(1000, function() {
+        $("#Aquamarine-h1"). SlideDown (3000); 
+      }); 
+    </script>
     <!-- Book Question -->
     <form id="food-form">
       <label>
@@ -74,10 +123,12 @@ Select ONE Additional Feature to Add
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
+      
       }
       //Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
+        
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
@@ -106,6 +157,9 @@ Select ONE Additional Feature to Add
 //       $("#PitchPerfect-pic").slideDown( 1000)
      
     </script>
+   
+         
+               
   </body>
 
   <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
